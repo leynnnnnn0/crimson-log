@@ -17,6 +17,7 @@ body {
     background-color: #fff;
     min-height: 100vh;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    display: flex;
 }
 
 /* Header */
