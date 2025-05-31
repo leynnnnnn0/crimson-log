@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marriage License Application Progress | CRIMSON</title>
+    <link rel="stylesheet" href="css/application_progress.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- header -->
+        <header class="header">
+            <div class="logo-section">
+                <img src="images/binan-logo.png" alt="Biñan Logo" class="logo">
+                <h1 class="brand"><a href="dashboard.html" style="text-decoration: none; color: inherit;">CRIMSON</a></h1>
+            </div>
+            <div class="user-section">
+                <div class="user-avatar" id="user-menu-trigger">
+                    <img src="images/user-avatar.png" alt="User" class="avatar">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="user-menu" id="user-menu">
+                    <div class="user-info">
+                        <img src="images/user-avatar.png" alt="User" class="menu-avatar">
+                        <div class="user-details">
+                            <span class="user-name" id="menu-user-name">$NAME</span>
+                            <span class="user-email">user@example.com</span>
+                        </div>
+                    </div>
+                    <ul class="menu-options">
+                        <li><a href="profile.html"><i class="fas fa-user"></i> My Profile</a></li>
+                        <li><a href="change_password.html"><i class="fas fa-key"></i> Change Password</a></li>
+                        <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+                        <li class="divider"></li>
+                        <li><a href="logout.php" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <!-- main content -->
+        <main class="main-content">
+            <div class="back-link">
+                <a href="dashboard.html"><i class="fas fa-arrow-left"></i> Back</a>
+            </div>
+            
+            <h2 class="page-title">Marriage License Application Progress</h2>
+            
+            <!-- Instructional Guide -->
+            <div class="instruction-guide">
+                <div class="guide-header">
+                    <i class="fas fa-info-circle"></i>
+                    <h3>Instructions</h3>
+                </div>
+                <div class="guide-content">
+                    <p>This page shows the current status of your marriage license application.</p>
+                    <ul>
+                        <li>Track the progress of your application through the timeline below</li>
+                        <li>Each completed step will be marked with a checkmark</li>
+                        <li>The current step is highlighted in the timeline</li>
+                        <li>You will receive email notifications when your application status changes</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="progress-container">
+                <div class="request-info">
+                    <h3>Request ID: <span class="request-id">ML001</span></h3>
+                    <p>Marriage License Application</p>
+                    <span class="status pending">Pending</span>
+                </div>
+                
+                <div class="timeline">
+                    <!-- step 1 -->
+                    <div class="timeline-item completed">
+                        <div class="timeline-marker">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4 class="timeline-title">Application Submitted</h4>
+                            <p class="timeline-desc">Your request has been received</p>
+                            <p class="timeline-time">March 15, 2025 - 10:30 AM</p>
+                        </div>
+                    </div>
+                    
+                    <!-- step 2 -->
+                    <div class="timeline-item active">
+                        <div class="timeline-marker">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4 class="timeline-title">Document Verification</h4>
+                            <p class="timeline-desc">Your request is being verified</p>
+                            <p class="timeline-time">In Progress</p>
+                        </div>
+                    </div>
+                    
+                    <!-- step 3 -->
+                    <div class="timeline-item pending">
+                        <div class="timeline-marker">
+                            <i class="fas fa-cog"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4 class="timeline-title">Processing</h4>
+                            <p class="timeline-desc">Document is being processed</p>
+                            <p class="timeline-time">Pending</p>
+                        </div>
+                    </div>
+                    
+                    <!-- step 4 -->
+                    <div class="timeline-item pending">
+                        <div class="timeline-marker">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4 class="timeline-title">Ready for Pickup</h4>
+                            <p class="timeline-desc">Document is ready for pickup</p>
+                            <p class="timeline-time">Pending</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="additional-info">
+                    <p><strong>Estimated Completion:</strong> March 20, 2025</p>
+                    <p><strong>Notes:</strong> Please prepare valid ID for pickup</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/application_progress.js"></script>
+</body>
+</html>

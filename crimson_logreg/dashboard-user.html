@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <script src="/assets/js/base.js"></script> 
+    <title>Dashboard</title>
+</head>
+<body>
+    <!-- header -->
+    <div class="header">
+        <div class="headerleft">
+            <div class="crimson-icon">
+                <!-- insert image -->
+            </div>
+            <div class="crimson-title">
+                <h1>CRIMSON</h1>
+            </div>
+        </div>
+        <div class="headermid">
+            <h1 class="page-title">Dashboard</h1>
+        </div>
+        <div class="headerright">
+            <div class="headerbutton" id="headerBtn" onclick="toggleOptions()">
+                <!-- add button for -->
+                <i class="material-icons">more_horiz</i>
+            </div>
+            <div class="header-dropdown" id="headerDropdown">
+                <a href="">
+                    <div class="dropdown-item">
+                        <i class="material-icons">help</i><p>Help</p>
+                    </div>
+                </a>
+                <div class="divline"></div>
+                <a id="logoutBtn">
+                    <div class="dropdown-item" >
+                        <i class="material-icons">logout</i><p>Logout</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- navigation sidebar -->
+    <div class="navtoggle open" id="toggleBtn" onclick="toggleNav()">
+        <p><i class="material-icons" >menu</i></p>
+    </div>    
+    <nav class="sidenav user open" id="sideNav">
+        <!-- main -->
+            <a id="" href="">
+                <div class="navlink-container">
+                    <i class="material-icons">dashboard</i>Dashboard
+                </div>
+            </a>
+            <div class="nav-divide"></div>
+            <!-- marriage license application -->
+            <p class="nav-desc">Marriage License</p>
+            <a href="/">
+                <div class="navlink-container">
+                    <i class="material-icons">edit_document</i>Application Form
+                </div>
+            </a>
+            <a href="/">
+                <div class="navlink-container">
+                    <i class="material-icons">picture_as_pdf</i>View Application
+                </div>
+            </a>
+            <a href="/">
+                <div class="navlink-container">
+                    <i class="material-icons">equalizer</i>Application Progress
+                </div>
+            </a>
+            <div class="nav-divide"></div>
+        <!-- document requests -->
+            <p class="nav-desc">Document Requests</p>
+            <a href="/">
+                <div class="navlink-container">
+                    <i class="material-icons">edit_document</i>Request Form
+                </div>
+            </a>
+            <a href="/">
+                <div class="navlink-container">
+                    <i class="material-icons">picture_as_pdf</i>View Request
+                </div>
+            </a>
+            <a href="/">
+                <div class="navlink-container">
+                    <i class="material-icons">checklist</i>Request Progress
+                </div>
+            </a>
+        
+        <!-- footer -->
+        <footer>
+            <p>© Copyright 2025. Developed by NU Laguna BS Information System Students.</p>
+        </footer>
+    </nav>
+
+    <!-- main content -->
+    <div class="main navopen" id="main">
+        <!-- main head -->
+        <div class="content-header">
+            <div class="welcome-header">
+                <p>Welcome, []!</p>
+                <p class="sub">What would you like to do?</p>
+            </div>
+            <div class="time-header">
+                <p class="current-date">May 9, 2025 - Friday</p>
+                <h1 class="current-time">09:12:35 PM</h1>
+            </div>
+        </div>
+        <!-- services -->
+        <div class="main-content">
+            <div class="section user">
+                <div class="section-header">
+                    <h2>Marriage License Application</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="section-content">
+                    <a href="">
+                        <div class="section-card">
+                            <div class="sec-card-top">
+                                <div class="sec-card-img"><i class="material-icons">edit_document</i></div>
+                            </div>
+                            <div class="sec-card-btm">
+                                <div class="sec-card-name">Application Form</div>
+                                <p class="sec-card-button"><i class="material-icons">chevron_right</i></p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="section-card">
+                            <div class="sec-card-top">
+                                <div class="sec-card-img"><i class="material-icons">picture_as_pdf</i></div>
+                            </div>
+                            <div class="sec-card-btm">
+                                <p class="sec-card-name">View Marriage License Application</p>
+                                <p class="sec-card-button"><i class="material-icons">chevron_right</i></p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="section-card">
+                            <div class="sec-card-top">
+                                <div class="sec-card-img"><i class="material-icons">checklist</i></div>
+                            </div>
+                            <div class="sec-card-btm">
+                                <p class="sec-card-name">Application Progress</p>
+                                <p class="sec-card-button"><i class="material-icons">chevron_right</i></p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="section user">
+                <div class="section-header">
+                    <h2>Document Request</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="section-content">
+                    <a href="">
+                        <div class="section-card">
+                            <div class="sec-card-top">
+                                <div class="sec-card-img"><i class="material-icons">edit_document</i></div>
+                            </div>
+                            <div class="sec-card-btm">
+                                <div class="sec-card-name">Document Request Form</div>
+                                <p class="sec-card-button"><i class="material-icons">chevron_right</i></p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="section-card">
+                            <div class="sec-card-top">
+                                <div class="sec-card-img"><i class="material-icons">picture_as_pdf</i></div>
+                            </div>
+                            <div class="sec-card-btm">
+                                <p class="sec-card-name">View Document Request</p>
+                                <p class="sec-card-button"><i class="material-icons">chevron_right</i></p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="section-card">
+                            <div class="sec-card-top">
+                                <div class="sec-card-img"><i class="material-icons">checklist</i></div>
+                            </div>
+                            <div class="sec-card-btm">
+                                <p class="sec-card-name">Document Request Progress</p>
+                                <p class="sec-card-button"><i class="material-icons">chevron_right</i></p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- dialogs -->
+    <dialog id="logoutConfirm" class="modal"> <!-- couldnt figure js out-->
+            <form method="dialog">
+                <div class="dialog-title">
+                    <h2>You are logging out.</h2>
+                </div>
+                <div class="dialog-content">
+                    <p>Are you sure you want to logout?</p>
+                </div>
+                <div class="dialogbtn-container">
+                    <button id="cancelOut">Cancel</button>
+                    <button class="warnbtn" id="confirmOut">Logout</button>
+                </div>
+            </form>
+    </dialog>
+</body>
+</html>

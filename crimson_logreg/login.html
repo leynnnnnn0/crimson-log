@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRIMSON - Login</title>
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <div class="logo-container">
+                <div class="lcro">LCRO</div>
+                <img src="images/binan-logo.png" alt="Biñan City Logo" class="city-logo">
+                <h1 class="brand"><a href="dashboard.html" style="text-decoration: none; color: inherit;">CRIMSON</a></h1>
+                <div class="subtitle">LOCAL CIVIL REGISTRY OFFICE</div>
+            </div>
+            <div class="footer">
+                <p>DESIGNED BY NU STUDENTS</p>
+            </div>
+        </div>
+        <div class="right-panel">
+            <div class="form-container">
+                <h2>Login</h2>
+                <form id="login-form" action="process_login.php" method="post">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required>
+                        <small class="error-message" id="username-error"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                        <small class="error-message" id="password-error"></small>
+                    </div>
+                    <div class="form-group forgot-password">
+                        <a href="forgot_password.html">Forgot password?</a>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">Log in</button>
+                    </div>
+                    <div class="form-footer">
+                        <p>Don't have an account? <a href="register.html">Sign up</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginForm = document.getElementById('login-form');
+            const usernameInput = document.getElementById('username');
+            const passwordInput = document.getElementById('password');
+            const usernameError = document.getElementById('username-error');
+            const passwordError = document.getElementById('password-error');
+            
+            // Username validation
+            usernameInput.addEventListener('blur', function() {
+                const username = this.value.trim();
+                
+                // Check if username already exists (this would normally be an AJAX call)
+                const existingUsernames = ['admin', 'user1', 'test']; // Example list
+                
+                if (username.length < 5) {
+                    usernameError.textContent = 'Username must be at least 5 characters long';
+                } else if (!/^[a-zA-Z0-9_]+$/.test(username)) {
+                    usernameError.textContent = 'Username can only contain letters, numbers, and underscores';
+                } else if (existingUsernames.includes(username)) {
+                    usernameError.textContent = 'The username you input is invalid or already taken';
+                } else {
+                    usernameError.textContent = '';
+                }
+            });
+            
+            // Password validation
+            passwordInput.addEventListener('blur', function() {
+                const password = this.value;
+                
+                if (password.length < 8) {
+                    passwordError.textContent = 'Password must be at least 8 characters long';
+                } else if (!/[A-Z]/.test(password)) {
+                    passwordError.textContent = 'Password must contain at least one uppercase letter';
+                } else if (!/[a-z]/.test(password)) {
+                    passwordError.textContent = 'Password must contain at least one lowercase letter';
+                } else if (!/[0-9]/.test(password)) {
+                    passwordError.textContent = 'Password must contain at least one number';
+                } else if (!/[^A-Za-z0-9]/.test(password)) {
+                    passwordError.textContent = 'Password must contain at least one special character';
+                } else {
+                    passwordError.textContent = '';
+                }
+            });
+            
+            // Form submission validation
+            loginForm.addEventListener('submit', function(e) {
+                // Trigger validation
+                usernameInput.dispatchEvent(new Event('blur'));
+                passwordInput.dispatchEvent(new Event('blur'));
+                
+                // Check if there are any errors
+                if (usernameError.textContent || passwordError.textContent) {
+                    e.preventDefault();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

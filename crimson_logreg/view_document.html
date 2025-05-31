@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRIMSON - View Document Request</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/view_document.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- header -->
+        <header class="header">
+            <div class="logo-section">
+                <img src="images/binan-logo.png" alt="LCRO Logo" class="logo">
+                <h1 class="brand"><a href="dashboard.html" style="text-decoration: none; color: inherit;">CRIMSON</a></h1>
+            </div>
+            <div class="user-section">
+                <div class="user-avatar" id="user-menu-trigger">
+                    <img src="images/user-avatar.png" alt="User" class="avatar">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="user-menu" id="user-menu">
+                    <div class="user-info">
+                        <img src="images/user-avatar.png" alt="User" class="menu-avatar">
+                        <div class="user-details">
+                            <span class="user-name" id="menu-user-name">$NAME</span>
+                            <span class="user-email">user@example.com</span>
+                        </div>
+                    </div>
+                    <ul class="menu-options">
+                        <li><a href="profile.html"><i class="fas fa-user"></i> My Profile</a></li>
+                        <li><a href="change_password.html"><i class="fas fa-key"></i> Change Password</a></li>
+                        <li class="divider"></li>
+                        <li><a href="logout.php" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <!-- main content -->
+        <main class="main-content">
+            <div class="back-link">
+                <a href="dashboard.html" class="back-button"><i class="fas fa-arrow-left"></i> Back</a>
+            </div>
+            
+            <h2 class="page-title">View Document Request</h2>
+            
+            <!-- Instructional Guide -->
+            <div class="instruction-guide">
+                <div class="guide-header">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+                <div class="guide-content">
+                    <h3>Instructions</h3>
+                    <p>This page displays all your document requests and their current status.</p>
+                    <ul>
+                        <li>Use the search box to find specific requests</li>
+                        <li>Filter requests by document type or status</li>
+                        <li>Click on a request ID to view more details</li>
+                        <li>Use the action buttons to manage your requests</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="document-list">
+                <div class="document-filters">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search documents..." id="searchInput">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="filter-options">
+                        <select id="documentType">
+                            <option value="">All Documents</option>
+                            <option value="birth">Birth Certificate</option>
+                            <option value="marriage">Marriage Certificate</option>
+                            <option value="death">Death Certificate</option>
+                        </select>
+                        <select id="status">
+                            <option value="">All Status</option>
+                            <option value="pending">Pending</option>
+                            <option value="approved">Approved</option>
+                            <option value="rejected">Rejected</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="documents-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Request ID</th>
+                                <th>Document Type</th>
+                                <th>Date Requested</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="documentTableBody">
+                            <!-- Documents will be populated here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/view_document.js"></script>
+</body>
+</html>

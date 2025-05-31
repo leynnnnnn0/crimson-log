@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRIMSON - Dashboard</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-menu">
+                <li><a href="dashboard.html" class="active"><i class="fas fa-th-large"></i> Dashboard</a></li>
+                
+                <div class="sidebar-menu-header">Marriage License</div>
+                <li><a href="application_form.html"><i class="fas fa-file-alt"></i> Application Form</a></li>
+                <li><a href="view_marriage.html"><i class="fas fa-file-pdf"></i> View Application</a></li>
+                <li><a href="application_progress.html"><i class="fas fa-tasks"></i> Application Progress</a></li>
+                
+                <div class="sidebar-menu-header">Document Requests</div>
+                <li><a href="document_request.html"><i class="fas fa-file-alt"></i> Request Form</a></li>
+                <li><a href="view_document.html"><i class="fas fa-file-pdf"></i> View Request</a></li>
+                <li><a href="document_progress.html"><i class="fas fa-tasks"></i> Request Progress</a></li>
+            </div>
+            
+            <div class="footer">
+                © Copyright 2025. Developed by<br>
+                NU Laguna BS Information System<br>
+                Students.
+            </div>
+        </div>
+        
+        <!-- Main Content Wrapper -->
+        <div class="main-content-wrapper">
+            <!-- Header -->
+            <header class="header">
+                <div class="logo-section">
+                    <img src="images/binan-logo.png" alt="LCRO Logo" class="logo">
+                    <h1 class="brand">CRIMSON</h1>
+                </div>
+                <div class="header-title">DASHBOARD</div>
+                <div class="user-section">
+                    <div class="user-avatar" id="user-menu-trigger">
+                        <img src="images/user-avatar.png" alt="User" class="avatar">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="user-menu" id="user-menu">
+                        <div class="user-info">
+                            <img src="images/user-avatar.png" alt="User" class="menu-avatar">
+                            <div class="user-details">
+                                <span class="user-name" id="menu-user-name">$NAME</span>
+                                <span class="user-email">user@example.com</span>
+                            </div>
+                        </div>
+                        <ul class="menu-options">
+                            <li><a href="profile.html"><i class="fas fa-user"></i> My Profile</a></li>
+                            <li><a href="change_password.html"><i class="fas fa-key"></i> Change Password</a></li>
+                            <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+                            <li class="divider"></li>
+                            <li><a href="logout.php" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+          
+            <main class="main-content">
+                <div class="welcome-section">
+                    <div class="greeting">
+                        <h2>Welcome, <span id="user-name">[]!</span></h2>
+                        <p>What would you like to do?</p>
+                    </div>
+                    <div class="date-time">
+                        <p id="current-date">May 9, 2025 - Friday</p>
+                        <p id="current-time" class="time">09:12:35 PM</p>
+                    </div>
+                </div>
+
+                <!-- Marriage License Section -->
+                <section class="service-section">
+                    <h3 class="section-title">Marriage License Application</h3>
+                    <div class="service-cards">
+                        <a href="application_form.html" class="card">
+                            <div class="card-icon red">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-title">Application Form</div>
+                            </div>
+                            <div class="card-arrow">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                        </a>
+                        <a href="view_marriage.html" class="card">
+                            <div class="card-icon red">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-title">View Marriage License Application</div>
+                            </div>
+                            <div class="card-arrow">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                        </a>
+                        <a href="application_progress.html" class="card">
+                            <div class="card-icon red">
+                                <i class="fas fa-tasks"></i>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-title">Application Progress</div>
+                            </div>
+                            <div class="card-arrow">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Document Request Section -->
+                <section class="service-section">
+                    <h3 class="section-title">Document Request</h3>
+                    <div class="service-cards">
+                        <a href="document_request.html" class="card">
+                            <div class="card-icon red">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-title">Document Request Form</div>
+                            </div>
+                            <div class="card-arrow">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                        </a>
+                        <a href="view_document.html" class="card">
+                            <div class="card-icon red">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-title">View Document Request</div>
+                            </div>
+                            <div class="card-arrow">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                        </a>
+                        <a href="document_progress.html" class="card">
+                            <div class="card-icon red">
+                                <i class="fas fa-tasks"></i>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-title">Document Request Progress</div>
+                            </div>
+                            <div class="card-arrow">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+            </main>
+            
+            
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

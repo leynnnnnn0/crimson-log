@@ -1,0 +1,430 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    max-width: 100%;
+}
+
+/* Panel Styles */
+.left-panel {
+    flex: 1;
+    background-color: #8B0000; /* Dark red */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px;
+    text-align: center;
+}
+
+/* Panel Styles */
+.right-panel {
+    flex: 1;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    border-radius: 0 20px 20px 0;
+}
+
+/* Form Styles */
+.form-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    background-color: #f5f5f5;
+}
+
+label {
+    display: none;
+}
+
+.form-group input::placeholder {
+    color: #888;
+    font-size: 15px;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder,
+input[type="email"]::placeholder {
+    color: #888;
+}
+
+h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: none;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    background-color: #f5f5f5;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+    color: #888;
+}
+
+.btn-primary {
+    background-color: #8B0000;
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.forgot-password {
+    text-align: right;
+    margin: -10px 0 15px;
+}
+
+.forgot-password a {
+    color: #666;
+    font-size: 13px;
+}
+
+.social-login {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.social-login p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: #f5f5f5;
+    color: #8B0000;
+}
+
+/* Logo and Branding */
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.lcro {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.city-logo {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.footer {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+/* Form Styles */
+.form-container {
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+}
+
+.auth-text {
+    color: #ae0909;
+    margin: 10px 0 20px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.auth-text i {
+    color: #8B0000;
+    margin-right: 5px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+    border-color: #8B0000;
+    outline: none;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+}
+
+.remember-me input {
+    margin-right: 10px;
+}
+
+.remember-me label {
+    margin-bottom: 0;
+}
+
+.btn-primary {
+    background-color: #8B0000;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #6B0000;
+}
+
+.form-footer {
+    margin-top: 20px;
+    text-align: center;
+    color: #666;
+}
+
+.form-footer a {
+    color: #8B0000;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.form-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Style for forgot password link */
+.forgot-password a {
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+/* Name fields for registration */
+.name-fields {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.name-fields .form-group {
+    flex: 1;
+}
+
+.hint {
+    font-size: 12px;
+    color: #666;
+    font-style: italic;
+}
+.error-message {
+    color: #8B0000;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .left-panel, .right-panel {
+        flex: none;
+        width: 100%;
+    }
+    
+    .left-panel {
+        padding: 20px;
+    }
+    
+    .city-logo {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 20px;
+    }
+    
+    h1 {
+        font-size: 36px;
+    }
+    
+    .name-fields {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+/* Admin Login Styles */
+
+.admin-badge {
+    background-color: #8B0000;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.admin-badge i {
+    margin-right: 8px;
+}
+
+#admin-login-form .btn-primary {
+    background-color: #8B0000;
+}
+
+#admin-login-form .btn-primary:hover {
+    background-color: #6B0000;
+}
+
+
+/* Reset Password Styles */
+.btn-secondary {
+    
+    color: rgb(69, 71, 81);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-left: 10px;
+    transition: background-color 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #0f8b40;
+}
+
+.form-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn-secondary {
+    background: none;
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.btn-secondary:hover {
+    color: #fdfdfd;
+    text-decoration: underline;
+}

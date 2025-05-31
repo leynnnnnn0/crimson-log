@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRIMSON - Settings</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/settings.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- header -->
+        <header class="header">
+            <div class="logo-section">
+                <img src="images/binan-logo.png" alt="LCRO Logo" class="logo">
+                <h1 class="brand"><a href="dashboard.html" style="text-decoration: none; color: inherit;">CRIMSON</a></h1>
+            </div>
+            <div class="user-section">
+                <div class="user-avatar" id="user-menu-trigger">
+                    <img src="images/user-avatar.png" alt="User" class="avatar">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="user-menu" id="user-menu">
+                    <div class="user-info">
+                        <img src="images/user-avatar.png" alt="User" class="menu-avatar">
+                        <div class="user-details">
+                            <span class="user-name" id="menu-user-name">$NAME</span>
+                            <span class="user-email" id="menu-user-email">user@example.com</span>
+                        </div>
+                    </div>
+                    <ul class="menu-options">
+                        <li><a href="profile.html"><i class="fas fa-user"></i> My Profile</a></li>
+                        <li><a href="change_password.html"><i class="fas fa-key"></i> Change Password</a></li>
+                        <li><a href="settings.html" class="active"><i class="fas fa-cog"></i> Settings</a></li>
+                        <li class="divider"></li>
+                        <li><a href="logout.php" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <!-- main content -->
+        <main class="main-content">
+            <div class="back-link">
+                <a href="dashboard.html"><i class="fas fa-arrow-left"></i> Back to Dashboard</a>
+            </div>
+            
+            <h2 class="page-title">Settings</h2>
+            
+            <div class="settings-container">
+                <div class="settings-sidebar">
+                    <ul class="settings-nav">
+                        <li class="active" data-tab="account"><i class="fas fa-user-cog"></i> Account Settings</li>
+                        <li data-tab="notifications"><i class="fas fa-bell"></i> Notifications</li>
+                        <li data-tab="appearance"><i class="fas fa-palette"></i> Appearance</li>
+                        <li data-tab="privacy"><i class="fas fa-shield-alt"></i> Privacy & Security</li>
+                        <li data-tab="language"><i class="fas fa-language"></i> Language</li>
+                        <li data-tab="accessibility"><i class="fas fa-universal-access"></i> Accessibility</li>
+                        <li data-tab="help"><i class="fas fa-question-circle"></i> Help & Support</li>
+                    </ul>
+                </div>
+                
+                <div class="settings-content">
+                    <!-- account settings -->
+                    <div class="settings-tab active" id="account-tab">
+                        <h3 class="settings-tab-title">Account Settings</h3>
+                        
+                        <div class="settings-card">
+                            <div class="settings-card-header">
+                                <h4>Account Information</h4>
+                                <p>Manage your account details and preferences</p>
+                            </div>
+                            
+                            <div class="settings-form">
+                                <div class="form-group">
+                                    <label for="username">Username</label>
+                                    <input type="text" id="username" class="form-control" value="johndoe">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="account-email">Email Address</label>
+                                    <input type="email" id="account-email" class="form-control" value="john.doe@example.com">
+                                </div>
+                                
+                                <div class="form-actions">
+                                    <button type="button" class="btn btn-primary" id="save-account">Save Changes</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="settings-card">
+                            <div class="settings-card-header">
+                                <h4>Two-Factor Authentication</h4>
+                                <p>Add an extra layer of security to your account</p>
+                            </div>
+                            
+                            <div class="settings-option">
+                                <div class="option-info">
+                                    <h5>Enable Two-Factor Authentication</h5>
+                                    <p>Require a verification code when you sign in</p>
+                                </div>
+                                <div class="option-control">
+                                    <label class="switch">
+                                        <input type="checkbox" id="two-factor">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="settings-card danger-zone">
+                            <div class="settings-card-header">
+                                <h4>Danger Zone</h4>
+                                <p>Irreversible and destructive actions</p>
+                            </div>
+                            
+                            <div class="settings-option">
+                                <div class="option-info">
+                                    <h5>Delete Account</h5>
+                                    <p>Permanently delete your account and all associated data</p>
+                                </div>
+                                <div class="option-control">
+                                    <button type="button" class="btn btn-danger" id="delete-account">Delete Account</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- notifications tab -->
+                    <div class="settings-tab" id="notifications-tab">
+                        <h3 class="settings-tab-title">Notifications</h3>
+                        
+                        <div class="settings-card">
+                            <div class="settings-card-header">
+                                <h4>Email Notifications</h4>
+                                <p>Manage what emails you receive</p>
+                            </div>
+                            
+                            <div class="settings-option">
+                                <div class="option-info">
+                                    <h5>Application Updates</h5>
+                                    <p>Receive emails about your application status</p>
+                                </div>
+                                <div class="option-control">
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="settings-option">
+                                <div class="option-info">
+                                    <h5>Document Requests</h5>
+                                    <p>Receive emails about your document requests</p>
+                                </div>
+                                <div class="option-control">
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="settings-option">
+                                <div class="option-info">
+                                    <h5>System Announcements</h5>
+                                    <p>Receive emails about system updates and maintenance</p>
+                                </div>
+                                <div class="option-control">
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- appearance tab -->
+                    <div class="settings-tab" id="appearance-tab">
+                        <h3 class="settings-tab-title">Appearance</h3>
+                        
+                        <div class="settings-card">
+                            <div class="settings-card-header">
+                                <h4>Theme</h4>
+                                <p>Choose your preferred theme</p>
+                            </div>
+                            
+                            <div class="theme-options">
+                                <div class="theme-option active" data-theme="light">
+                                    <div class="theme-preview light-theme"></div>
+                                    <span>Light</span>
+                                </div>
+                                <div class="theme-option" data-theme="dark">
+                                    <div class="theme-preview dark-theme"></div>
+                                    <span>Dark</span>
+                                </div>
+                                <div class="theme-option" data-theme="system">
+                                    <div class="theme-preview system-theme"></div>
+                                    <span>System Default</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="settings-card">
+                            <div class="settings-card-header">
+                                <h4>Font Size</h4>
+                                <p>Adjust the text size</p>
+                            </div>
+                            
+                            <div class="font-size-slider">
+                                <span class="font-size-label small">A</span>
+                                <input type="range" min="1" max="5" value="3" class="slider" id="font-size-slider">
+                                <span class="font-size-label large">A</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Privacy & Security Tab -->
+                    <div class="settings-tab" id="privacy-tab">
+                        <h3 class="settings-tab-title">Privacy & Security</h3>
+                        
+                        <div class="settings-card">
+                            <div class="settings-card-header">
+                                <h4>Privacy Settings</h4>
+                                <p>Control your privacy preferences</p>
+                            </div>
+                            
+                            <div class="settings-option">
+                                <div class="option-info">
+                                    <h5>Profile Visibility</h5>
+                                    <p>Control who can see your profile information</p>
+                                </div>
+                                <div class="option-control">
+                                    <select class="form-control">
+                                        <option value="public">Public</option>
+                                        <option value="private" selected>Private</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="settings-card">
+                            <div class="settings-card-header">
+                                <h4>Security Settings</h4>
+                                <p>Manage your account security</p>
+                            </div>
+                            
+                            <div class="settings-option">
+                                <div class="option-info">
+                                    <h5>Session Management</h5>
+                                    <p>View and manage your active sessions</p>
+                                </div>
+                                <div class="option-control">
+                                    <button type="button" class="btn btn-secondary">Manage Sessions</button>
+                                </div>
+                            </div>
+                            
+                            <div class="settings-option">
+                                <div class="option-info">
+                                    <h5>Login History</h5>
+                                    <p>View your recent login activity</p>
+                                </div>
+                                <div class="option-control">
+                                    <button type="button" class="btn btn-secondary">View History</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- language tab -->
+                    <div class="settings-tab" id="language-tab">
+                        <h3 class="settings-tab-title">Language</h3>
+                        
+                        <div class="settings-card">
+                            <div class="settings-card-header">
+                                <h4>Language Preferences</h4>
+                                <p>Choose your preferred language</p>
+                            </div>
+                            
+                            <div class="settings-form">
+                                <div class="form-group">
+                                    <label for="language">Display Language</label>
+                                    <select id="language" class="form-control">
+                                        <option value="en" selected>English</option>
+                                        <option value="fil">Filipino</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-actions">
+                                    <button type="button" class="btn btn-primary" id="save-language">Save Changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- accessibility tab -->
+                    <div class="settings-tab" id="accessibility-tab">
+                        <h3 class="settings-tab-title">Accessibility</h3>
+                        
+                        <div class="settings-card">
+                            <div class="settings-card-header">
+                                <h4>Accessibility Options</h4>
+                                <p>Customize your experience</p>
+                            </div>
+                            
+                            <div class="settings-option">
+                                <div class="option-info">
+                                    <h5>High Contrast Mode</h5>
+                                    <p>Increase contrast for better visibility</p>
+                                </div>
+                                <div class="option-control">
+                                    <label class="switch">
+                                        <input type="checkbox" id="high-contrast">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="settings-option">
+                                <div class="option-info">
+                                    <h5>Reduce Animations</h5>
+                                    <p>Minimize motion effects</p>
+                                </div>
+                                <div class="option-control">
+                                    <label class="switch">
+                                        <input type="checkbox" id="reduce-animations">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- help & support tab -->
+                    <div class="settings-tab" id="help-tab">
+                        <h3 class="settings-tab-title">Help & Support</h3>
+                        
+                        <div class="settings-card">
+                            <div class="settings-card-header">
+                                <h4>Support Resources</h4>
+                                <p>Get help with CRIMSON</p>
+                            </div>
+                            
+                            <div class="support-links">
+                                <a href="#" class="support-link">
+                                    <i class="fas fa-book"></i>
+                                    <div class="support-link-info">
+                                        <h5>User Guide</h5>
+                                        <p>Learn how to use CRIMSON</p>
+                                    </div>
+                                </a>
+                                
+                                <a href="#" class="support-link">
+                                    <i class="fas fa-question-circle"></i>
+                                    <div class="support-link-info">
+                                        <h5>FAQs</h5>
+                                        <p>Frequently asked questions</p>
+                                    </div>
+                                </a>
+                                
+                                <a href="#" class="support-link">
+                                    <i class="fas fa-headset"></i>
+                                    <div class="support-link-info">
+                                        <h5>Contact Support</h5>
+                                        <p>Get help from our support team</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="settings-card">
+                            <div class="settings-card-header">
+                                <h4>System Information</h4>
+                                <p>Technical details about your system</p>
+                            </div>
+                            
+                            <div class="system-info">
+                                <div class="info-item">
+                                    <span class="info-label">Version</span>
+                                    <span class="info-value">1.0.0</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Last Updated</span>
+                                    <span class="info-value">May 12, 2023</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Browser</span>
+                                    <span class="info-value" id="browser-info">Chrome 112.0.5615.138</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- confirmation modal -->
+    <div class="modal" id="confirmation-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Confirm Action</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p id="modal-message">Are you sure you want to proceed with this action?</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="modal-cancel">Cancel</button>
+                <button class="btn btn-danger" id="modal-confirm">Confirm</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- notification -->
+    <div class="notification" id="notification">
+        <div class="notification-icon">
+            <i class="fas fa-check-circle"></i>
+        </div>
+        <div class="notification-content">
+            <div class="notification-title">Success</div>
+            <div class="notification-message">Your settings have been saved successfully!</div>
+        </div>
+        <button class="notification-close">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+    <script src="js/settings.js"></script>
+</body>
+</html>

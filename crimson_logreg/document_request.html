@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Request | CRIMSON</title>
+    <link rel="stylesheet" href="css/document_request.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- header -->
+        <header class="header">
+            <div class="logo-section">
+                <img src="images/binan-logo.png" alt="Biñan Logo" class="logo">
+                <h1 class="brand"><a href="dashboard.html" style="text-decoration: none; color: inherit;">CRIMSON</a></h1>
+            </div>
+            <div class="user-section">
+                <div class="user-avatar" id="user-menu-trigger">
+                    <img src="images/user-avatar.png" alt="User" class="avatar">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="user-menu" id="user-menu">
+                    <div class="user-info">
+                        <img src="images/user-avatar.png" alt="User" class="menu-avatar">
+                        <div class="user-details">
+                            <span class="user-name" id="menu-user-name">$NAME</span>
+                            <span class="user-email">user@example.com</span>
+                        </div>
+                    </div>
+                    <ul class="menu-options">
+                        <li><a href="profile.html"><i class="fas fa-user"></i> My Profile</a></li>
+                        <li><a href="change_password.html"><i class="fas fa-key"></i> Change Password</a></li>
+                        <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+                        <li class="divider"></li>
+                        <li><a href="logout.php" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <!-- main content -->
+        <main class="main-content">
+            <div class="back-link">
+                <a href="dashboard.html"><i class="fas fa-arrow-left"></i> Back</a>
+            </div>
+            
+            <h2 class="page-title">APPLICATION FORM - Document Request</h2>
+            
+            <!-- Instructional Guide -->
+            <div class="instruction-guide">
+                <div class="guide-header">
+                    <i class="fas fa-info-circle"></i>
+                    <h3>Instructions</h3>
+                </div>
+                <div class="guide-content">
+                    <p>Follow these steps to request a document from the Local Civil Registry Office:</p>
+                    <ol>
+                        <li>Select the type of document you need</li>
+                        <li>Fill in the document details and required information</li>
+                        <li>Choose your preferred pickup method</li>
+                        <li>Complete the payment process</li>
+                        <li>Receive confirmation via SMS or email</li>
+                    </ol>
+                    <p class="note"><strong>Note:</strong> All fields marked with an asterisk (*) are mandatory.</p>
+                </div>
+            </div>
+            
+            <!-- progress indicator -->
+            <div class="progress-indicator">
+                <div class="progress-line" id="progress-line"></div>
+                
+                <div class="progress-step" data-step="1">
+                    <div class="step-marker active"></div>
+                    <div class="step-label">Document Request</div>
+                </div>
+                
+                <div class="progress-step" data-step="2">
+                    <div class="step-marker"></div>
+                    <div class="step-label">Document Details</div>
+                </div>
+                
+                <div class="progress-step" data-step="3">
+                    <div class="step-marker"></div>
+                    <div class="step-label">Pickup Method</div>
+                </div>
+                
+                <div class="progress-step" data-step="4">
+                    <div class="step-marker"></div>
+                    <div class="step-label">Payment</div>
+                </div>
+                
+                <div class="progress-step" data-step="5">
+                    <div class="step-marker"></div>
+                    <div class="step-label">Confirmation SMS/Email Notification</div>
+                </div>
+            </div>
+            
+            <!-- form -->
+            <form id="document-request-form">
+                <!-- step 1: document request -->
+                <section class="form-section active" id="step-1">
+                    <h3 class="section-title">TYPE OF DOCUMENT</h3>
+                    
+                    <div class="form-group">
+                        <label for="document-type">SELECT DOCUMENT</label>
+                        <div class="select-wrapper">
+                            <select id="document-type" class="form-control" required>
+                                <option value="" selected disabled>Select</option>
+                                <option value="birth_certificate">Birth Certificate</option>
+                                <option value="marriage_certificate">Marriage Certificate</option>
+                                <option value="death_certificate">Death Certificate</option>
+                                <option value="death_certificate">Fetal Death Certificate</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="btn-container">
+                        <div></div> <!-- empty div for spacing -->
+                        <button type="button" class="btn btn-next" data-next="2">Next</button>
+                    </div>
+                </section>
+                
+                <!-- step 2: document details -->
+                <section class="form-section" id="step-2">
+                    <h3 class="section-title">DOCUMENT DETAILS</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="first-name">FIRST NAME</label>
+                                <input type="text" id="first-name" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="middle-name">MIDDLE NAME</label>
+                                <input type="text" id="middle-name" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="last-name">LAST NAME</label>
+                                <input type="text" id="last-name" class="form-control" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="sex">SEX</label>
+                                <div class="select-wrapper">
+                                    <select id="sex" class="form-control" required>
+                                        <option value="" selected disabled>Select</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="date-of-birth">DATE OF BIRTH</label>
+                                <input type="date" id="date-of-birth" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="place-of-birth">PLACE OF BIRTH</label>
+                                <input type="text" id="place-of-birth" class="form-control" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="btn-container">
+                        <button type="button" class="btn btn-prev" data-prev="1">Previous</button>
+                        <button type="button" class="btn btn-next" data-next="3">Next</button>
+                    </div>
+                </section>
+                
+                <!-- step 3: delivery/pickup method -->
+                <section class="form-section" id="step-3">
+                    <h3 class="section-title">DELIVERY METHOD</h3>
+                    
+                    <div class="form-group">
+                        <label for="courier">SELECT COURIER?</label>
+                        <div class="select-wrapper">
+                            <select id="courier" class="form-control" required>
+                                <option value="" selected disabled>Select</option>
+                                <option value="pickup">Pickup at Office</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div id="delivery-address-container" style="display: none;">
+                        <div class="form-group">
+                            <label for="delivery-address">DELIVERY ADDRESS</label>
+                            <input type="text" id="delivery-address" class="form-control">
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-col">
+                                <div class="form-group">
+                                    <label for="city">CITY</label>
+                                    <input type="text" id="city" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-col">
+                                <div class="form-group">
+                                    <label for="province">PROVINCE</label>
+                                    <input type="text" id="province" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-col">
+                                <div class="form-group">
+                                    <label for="postal-code">POSTAL CODE</label>
+                                    <input type="text" id="postal-code" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="btn-container">
+                        <button type="button" class="btn btn-prev" data-prev="2">Previous</button>
+                        <button type="button" class="btn btn-next" data-next="4">Next</button>
+                    </div>
+                </section>
+                
+                <!-- step 4: payment -->
+                <section class="form-section" id="step-4">
+                    <h3 class="section-title">PAYMENT</h3>
+                    
+                    <div class="form-group">
+                        <label for="payment-method">SELECT PAYMENT METHOD</label>
+                        <div class="select-wrapper">
+                            <select id="payment-method" class="form-control" required>
+                                <option value="" selected disabled>Select</option>
+                                <option value="cash">Cash on Pickup</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="btn-container">
+                        <button type="button" class="btn btn-prev" data-prev="3">Previous</button>
+                        <button type="button" class="btn btn-next" data-next="5">Next</button>
+                    </div>
+                </section>
+                
+                <!-- step 5: confirmation -->
+                <section class="form-section" id="step-5">
+                    <h3 class="section-title">CONFIRMATION</h3>
+                    
+                    <p>PLEASE REVIEW THE FOLLOWING INFORMATION</p>
+                    
+                    <div id="confirmation-details" class="confirmation-details">
+                        
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contact-number">CONTACT NUMBER</label>
+                        <input type="tel" id="contact-number" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">EMAIL ADDRESS</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+                    
+                    <div class="btn-container">
+                        <button type="button" class="btn btn-prev" data-prev="4">Previous</button>
+                        <button type="submit" class="btn btn-submit">Submit</button>
+                    </div>
+                </section>
+            </form>
+        </main>
+    </div>
+
+    <script src="js/document_request.js"></script>
+    <div class="success-message" id="successMessage" style="display: none;">
+        <p>Document request submitted successfully!</p>
+        <button class="ok-btn" onclick="redirectToDashboard()">OK</button>
+    </div>
+</body>
+</html>

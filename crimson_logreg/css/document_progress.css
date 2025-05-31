@@ -1,0 +1,230 @@
+.progress-container {
+    padding: 20px;
+}
+
+.progress-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.request-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.request-info h3 {
+    margin: 0;
+    color: #333;
+    font-size: 18px;
+}
+
+.request-info p {
+    margin: 5px 0 0;
+    color: #666;
+}
+
+.request-status {
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.request-status.pending {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.request-status.approved {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.request-status.rejected {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Timeline Styles */
+.progress-timeline {
+    position: relative;
+    padding: 20px 0;
+}
+
+.timeline-item {
+    display: flex;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 30px;
+    bottom: -30px;
+    width: 2px;
+    background-color: #ddd;
+}
+
+.timeline-item:last-child::before {
+    display: none;
+}
+
+.timeline-icon {
+    width: 32px;
+    height: 32px;
+    background-color: #ddd;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    z-index: 1;
+}
+
+.timeline-icon i {
+    color: white;
+    font-size: 14px;
+}
+
+.timeline-content {
+    flex: 1;
+}
+
+.timeline-content h4 {
+    margin: 0;
+    color: #333;
+    font-size: 16px;
+}
+
+.timeline-content p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.timeline-date {
+    font-size: 12px;
+    color: #888;
+}
+
+/* Timeline States */
+.timeline-item.completed .timeline-icon {
+    background-color: #28a745;
+}
+
+.timeline-item.active .timeline-icon {
+    background-color: #8B0000;
+}
+
+.timeline-item.active .timeline-content h4 {
+    color: #8B0000;
+}
+
+/* Additional Info */
+.additional-info {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.additional-info p {
+    margin: 10px 0;
+    color: #666;
+}
+
+.additional-info strong {
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .request-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .request-status {
+        margin-top: 10px;
+    }
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    color: #8B0000;
+    text-decoration: none;
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.back-button i {
+    margin-right: 8px;
+}
+
+.back-button:hover {
+    opacity: 0.8;
+}
+
+/* Instruction Guide - Enhanced */
+.instruction-guide {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-left: 4px solid #8B0000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    display: flex;
+}
+
+.guide-header {
+    display: flex;
+    align-items: flex-start;
+    margin-right: 15px;
+}
+
+.guide-header i {
+    color: #8B0000;
+    font-size: 20px;
+}
+
+.guide-content {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.5;
+    flex: 1;
+}
+
+.guide-content h3 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    color: #333;
+    font-weight: 600;
+}
+
+.guide-content ul, .guide-content ol {
+    margin: 10px 0;
+    padding-left: 25px;
+}
+
+.guide-content li {
+    margin-bottom: 8px;
+}
+
+.guide-content .note {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #8B0000;
+    /* Removing the container styling */
+}

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRIMSON - My Profile</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/profile.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- header -->
+        <header class="header">
+            <div class="logo-section">
+                <img src="images/binan-logo.png" alt="LCRO Logo" class="logo">
+                <h1 class="brand"><a href="dashboard.html" style="text-decoration: none; color: inherit;">CRIMSON</a></h1>
+            </div>
+            <div class="user-section">
+                <div class="user-avatar" id="user-menu-trigger">
+                    <img src="images/user-avatar.png" alt="User" class="avatar">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="user-menu" id="user-menu">
+                    <div class="user-info">
+                        <img src="images/user-avatar.png" alt="User" class="menu-avatar">
+                        <div class="user-details">
+                            <span class="user-name" id="menu-user-name">$NAME</span>
+                            <span class="user-email" id="menu-user-email">user@example.com</span>
+                        </div>
+                    </div>
+                    <ul class="menu-options">
+                        <li><a href="profile.html" class="active"><i class="fas fa-user"></i> My Profile</a></li>
+                        <li><a href="change_password.html"><i class="fas fa-key"></i> Change Password</a></li>
+                        <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+                        <li class="divider"></li>
+                        <li><a href="logout.php" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <!-- main content -->
+        <main class="main-content">
+            <div class="back-link">
+                <a href="dashboard.html"><i class="fas fa-arrow-left"></i> Back to Dashboard</a>
+            </div>
+            
+            <h2 class="page-title">My Profile</h2>
+            
+            <div class="profile-container">
+                <div class="profile-header">
+                    <div class="profile-avatar-container">
+                        <img src="images/user-avatar.png" alt="User" id="profile-avatar" class="profile-avatar">
+                        <div class="avatar-upload">
+                            <label for="avatar-input">
+                                <i class="fas fa-camera"></i>
+                            </label>
+                            <input type="file" id="avatar-input" accept="image/*">
+                        </div>
+                    </div>
+                    <div class="profile-name">
+                        <h3 id="profile-fullname">John Doe</h3>
+                        <p id="profile-username">@johndoe</p>
+                    </div>
+                </div>
+                
+                <div class="profile-tabs">
+                    <button class="tab-btn active" data-tab="personal">Personal Information</button>
+                    <button class="tab-btn" data-tab="contact">Contact Information</button>
+                    <button class="tab-btn" data-tab="activity">Recent Activity</button>
+                </div>
+                
+                <div class="profile-content">
+                    <!-- personal information tab -->
+                    <div class="tab-content active" id="personal-tab">
+                        <div class="info-card">
+                            <div class="info-card-header">
+                                <div class="info-card-icon">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="info-card-title">Basic Information</div>
+                            </div>
+                            <form id="personal-info-form">
+                                <div class="form-row">
+                                    <div class="form-col">
+                                        <div class="form-group">
+                                            <label for="first-name">First Name</label>
+                                            <input type="text" id="first-name" class="form-control" value="John" placeholder="Enter your first name">
+                                        </div>
+                                    </div>
+                                    <div class="form-col">
+                                        <div class="form-group">
+                                            <label for="middle-name">Middle Name</label>
+                                            <input type="text" id="middle-name" class="form-control" value="A." placeholder="Enter your middle name">
+                                        </div>
+                                    </div>
+                                    <div class="form-col">
+                                        <div class="form-group">
+                                            <label for="last-name">Last Name</label>
+                                            <input type="text" id="last-name" class="form-control" value="Doe" placeholder="Enter your last name">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="info-card-header">
+                                    <div class="info-card-icon">
+                                        <i class="fas fa-info-circle"></i>
+                                    </div>
+                                    <div class="info-card-title">Personal Details</div>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-col">
+                                        <div class="form-group">
+                                            <label for="birthdate">Date of Birth</label>
+                                            <input type="date" id="birthdate" class="form-control" value="1990-01-01">
+                                        </div>
+                                    </div>
+                                    <div class="form-col">
+                                        <div class="form-group">
+                                            <label for="gender">Gender</label>
+                                            <select id="gender" class="form-control">
+                                                <option value="male">Male</option>
+                                                <option value="female">Female</option>
+                                                <option value="other">Other</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-col">
+                                        <div class="form-group">
+                                            <label for="civil-status">Civil Status</label>
+                                            <select id="civil-status" class="form-control">
+                                                <option value="single">Single</option>
+                                                <option value="married">Married</option>
+                                                <option value="divorced">Divorced</option>
+                                                <option value="widowed">Widowed</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-actions">
+                                    <button type="button" class="btn btn-secondary">Cancel</button>
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="fas fa-save"></i> Save Changes
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <!-- contact information tab -->
+                    <div class="tab-content" id="contact-tab">
+                        <form id="contact-info-form">
+                            <div class="form-row">
+                                <div class="form-col">
+                                    <div class="form-group">
+                                        <label for="email">Email Address</label>
+                                        <input type="email" id="email" class="form-control" value="john.doe@example.com">
+                                    </div>
+                                </div>
+                                <div class="form-col">
+                                    <div class="form-group">
+                                        <label for="phone">Phone Number</label>
+                                        <input type="tel" id="phone" class="form-control" value="09123456789">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="address">Complete Address</label>
+                                <textarea id="address" class="form-control" rows="3">123 Main St, Biñan City, Laguna</textarea>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Save Changes</button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <!-- document request tab -->
+                    <div class="tab-content" id="activity-tab">
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <div class="activity-icon">
+                                    <i class="fas fa-file-alt"></i>
+                                </div>
+                                <div class="activity-details">
+                                    <div class="activity-title">Document Request Submitted</div>
+                                    <div class="activity-description">Birth Certificate Request</div>
+                                    <div class="activity-time">2 days ago</div>
+                                </div>
+                            </div>
+                            
+                            <div class="activity-item">
+                                <div class="activity-icon">
+                                    <i class="fas fa-user-edit"></i>
+                                </div>
+                                <div class="activity-details">
+                                    <div class="activity-title">Profile Updated</div>
+                                    <div class="activity-description">You updated your profile information</div>
+                                    <div class="activity-time">1 week ago</div>
+                                </div>
+                            </div>
+                            
+                            <div class="activity-item">
+                                <div class="activity-icon">
+                                    <i class="fas fa-sign-in-alt"></i>
+                                </div>
+                                <div class="activity-details">
+                                    <div class="activity-title">Account Created</div>
+                                    <div class="activity-description">Welcome to CRIMSON!</div>
+                                    <div class="activity-time">2 weeks ago</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>

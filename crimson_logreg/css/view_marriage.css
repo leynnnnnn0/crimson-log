@@ -1,0 +1,91 @@
+.user-section {
+    position: relative;
+    cursor: pointer;
+}
+
+.user-avatar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.user-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    min-width: 250px;
+    display: none;
+    z-index: 1000;
+    margin-top: 10px;
+}
+
+.user-info {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name {
+    font-weight: 600;
+    color: #333;
+}
+
+.user-email {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.menu-options {
+    list-style: none;
+    padding: 8px 0;
+    margin: 0;
+}
+
+.menu-options li {
+    padding: 8px 15px;
+}
+
+.menu-options li a {
+    color: #333;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu-options li a i {
+    color: #8B0000; 
+}
+
+.menu-options li a:hover {
+    color: #8B0000;
+}
+
+.menu-options .divider {
+    border-top: 1px solid #eee;
+    margin: 8px 0;
+}
+
+.logout i {
+    color: #8B0000 !important; 
+}
+
+.user-menu.active {
+    display: block;
+}

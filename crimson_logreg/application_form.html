@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form - Marriage License | CRIMSON</title>
+    <link rel="stylesheet" href="css/application_form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo-section">
+                <img src="images/binan-logo.png" alt="LCRO Logo" class="logo">
+                <h1 class="brand"><a href="dashboard.html" style="text-decoration: none; color: inherit;">CRIMSON</a></h1>
+            </div>
+            <div class="user-section">
+                <div class="user-avatar" id="user-menu-trigger">
+                    <img src="images/user-avatar.png" alt="User" class="avatar">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="user-menu" id="user-menu">
+                    <div class="user-info">
+                        <img src="images/user-avatar.png" alt="User" class="menu-avatar">
+                        <div class="user-details">
+                            <span class="user-name" id="menu-user-name">$NAME</span>
+                            <span class="user-email">user@example.com</span>
+                        </div>
+                    </div>
+                    <ul class="menu-options">
+                        <li><a href="profile.html"><i class="fas fa-user"></i> My Profile</a></li>
+                        <li><a href="change_password.html"><i class="fas fa-key"></i> Change Password</a></li>
+                        <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+                        <li class="divider"></li>
+                        <li><a href="logout.php" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="back-link">
+                <a href="dashboard.html"><i class="fas fa-arrow-left"></i> Back</a>
+            </div>
+            
+            <h2 class="page-title">APPLICATION FORM - Marriage License</h2>
+            
+            <!-- Instructional Guide -->
+            <div class="instruction-guide">
+                <div class="guide-header">
+                    <i class="fas fa-info-circle"></i>
+                    <h3>Instructions</h3>
+                </div>
+                <div class="guide-content">
+                    <p>Please complete all required fields and upload the necessary documents to apply for a marriage license.</p>
+                    <ul>
+                        <li>Fill in personal information for both applicants</li>
+                        <li>Provide current and permanent addresses</li>
+                        <li>Upload all required documents as listed below</li>
+                        <li>Review your information before submission</li>
+                    </ul>
+                    <p class="note"><strong>Note:</strong> All fields marked with an asterisk (*) are mandatory.</p>
+                </div>
+            </div>
+            
+            <form id="marriage-application-form">
+                <!-- personal information section -->
+                <section class="form-section">
+                    <h3 class="section-title">PERSONAL INFORMATION</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="first-name">FIRST NAME *</label>
+                            <input type="text" id="first-name" name="first_name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="middle-name">MIDDLE NAME</label>
+                            <input type="text" id="middle-name" name="middle_name">
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">LAST NAME *</label>
+                            <input type="text" id="last-name" name="last_name" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="sex">SEX</label>
+                            <select id="sex" name="sex" required>
+                                <option value="" selected disabled>Select</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="date-of-birth">DATE OF BIRTH</label>
+                            <input type="text" id="date-of-birth" name="date_of_birth" placeholder="DD/MM/YYYY" required>
+                            
+                        </div>
+                        <div class="form-group">
+                            <label for="place-of-birth">PLACE OF BIRTH</label>
+                            <input type="text" id="place-of-birth" name="place_of_birth" required>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- other details section -->
+                <section class="form-section">
+                    <h3 class="section-title">OTHER DETAILS</h3>
+                    
+                    <div class="form-group full-width">
+                        <label for="permanent-address">PERMANENT ADDRESS</label>
+                        <input type="text" id="permanent-address" name="permanent_address" required>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="current-address">CURRENT ADDRESS</label>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="same-address" name="same_address">
+                            <label for="same-address" class="checkbox-label">Current address is the same as permanent address</label>
+                        </div>
+                        <input type="text" id="current-address" name="current_address" required>
+                    </div>
+                </section>
+                
+                <!-- identification requirements section -->
+                <section class="form-section">
+                    <h3 class="section-title">IDENTIFICATION REQUIREMENTS</h3>
+                    
+                    <p class="requirements-text">The following requirements must be uploaded:</p>
+                    <ul class="requirements-list">
+                        <li>Birth certificate of both applicants</li>
+                        <li>Certificate of No Marriage(CENOMAR from NSO) of applicants</li>
+                        <li>Family Planning Certificate- From the population Office(as schedule)</li>
+                        <li>Consent of Parents-if applicant is 18 years but below 21 yrs of age</li>
+                        <li>Advice of Parents-if applicant is 21 years but below 25 years of age</li>
+                        <li>Certificate of Legal Capacity to marry-if applicant is foreigner</li>
+                        <li>Photocopy of Passport (arrival stamp)</li>
+                    </ul>
+                    
+                    <div class="upload-section">
+                        <div class="upload-row">
+                            <div class="upload-group">
+                                <h4>BIRTH CERTIFICATE *</h4>
+                                <div class="upload-item">
+                                    <span>Person 1</span>
+                                    <div class="upload-container">
+                                        <button type="button" class="upload-btn">Upload</button>
+                                        <span class="file-name" id="birth-cert-1-filename"></span>
+                                    </div>
+                                </div>
+                                <div class="upload-item">
+                                    <span>Person 2</span>
+                                    <div class="upload-container">
+                                        <button type="button" class="upload-btn">Upload</button>
+                                        <span class="file-name" id="birth-cert-2-filename"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="upload-group">
+                                <h4>CERTIFICATE OF NO MARRIAGE</h4>
+                                <div class="upload-item">
+                                    <span>Person 1</span>
+                                    <button type="button" class="upload-btn">Upload</button>
+                                </div>
+                                <div class="upload-item">
+                                    <span>Person 2</span>
+                                    <button type="button" class="upload-btn">Upload</button>
+                                </div>
+                            </div>
+                            
+                            <div class="upload-group">
+                                <h4>PARENT CONSENT</h4>
+                                <div class="upload-item">
+                                    <span>Person 1</span>
+                                    <button type="button" class="upload-btn">Upload</button>
+                                </div>
+                                <div class="upload-item">
+                                    <span>Person 2</span>
+                                    <button type="button" class="upload-btn">Upload</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="upload-row">
+                            <div class="upload-group">
+                                <h4>PARENT ADVICE</h4>
+                                <div class="upload-item">
+                                    <span>Person 1</span>
+                                    <button type="button" class="upload-btn">Upload</button>
+                                </div>
+                                <div class="upload-item">
+                                    <span>Person 2</span>
+                                    <button type="button" class="upload-btn">Upload</button>
+                                </div>
+                            </div>
+                            
+                            <div class="upload-group">
+                                <h4>CERTIFICATE OF LEGAL CAPACITY TO MARRY</h4>
+                                <div class="upload-item">
+                                    <span>Person 1</span>
+                                    <button type="button" class="upload-btn">Upload</button>
+                                </div>
+                                <div class="upload-item">
+                                    <span>Person 2</span>
+                                    <button type="button" class="upload-btn">Upload</button>
+                                </div>
+                            </div>
+                            
+                            <div class="upload-group">
+                                <h4>PASSPORT</h4>
+                                <div class="upload-item">
+                                    <span>Person 1</span>
+                                    <button type="button" class="upload-btn">Upload</button>
+                                </div>
+                                <div class="upload-item">
+                                    <span>Person 2</span>
+                                    <button type="button" class="upload-btn">Upload</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn-proceed">Proceed</button>
+                </div>
+            </form>
+        </main>
+    </div>
+
+    <script src="js/application_form.js"></script>
+</body>
+</html>

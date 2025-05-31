@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marriage License Registration - Biñan</title>
+    <link rel="stylesheet" href="css/marriage_registration.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- landing page -->
+        <div class="page landing-page" id="landing-page">
+            <div class="header">
+                <div class="office-title">Office of the City Civil Registrar - Biñan</div>
+            </div>
+            <div class="content">
+                <div class="icon-container">
+                    <img src="images/marriage-icon.png" alt="Marriage Icon" class="marriage-icon">
+                </div>
+                <h1>MARRIAGE LICENSE REGISTRATION</h1>
+                <button class="btn-primary" id="get-started">GET STARTED</button>
+            </div>
+        </div>
+
+        <!-- registration form page -->
+        <div class="page form-page" id="form-page">
+            <div class="form-header">
+                <h1>MARRIAGE LICENSE REGISTRATION</h1>
+            </div>
+            <div class="form-content">
+                <form id="marriage-form">
+                    <div class="section">
+                        <h2>HUSBAND</h2>
+                        <div class="form-group">
+                            <input type="text" id="husband-fullname" placeholder="Fullname" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="date" id="husband-dob" placeholder="Date of Birth" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="husband-pob" placeholder="Place of Birth" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="husband-residence" placeholder="Residence" required>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h2>WIFE</h2>
+                        <div class="form-group">
+                            <input type="text" id="wife-fullname" placeholder="Fullname" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="date" id="wife-dob" placeholder="Date of Birth" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="wife-pob" placeholder="Place of Birth" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="wife-residence" placeholder="Residence" required>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-back" id="btn-back">BACK</button>
+                        <button type="button" class="btn-next" id="btn-next">NEXT</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- progress indicator -->
+        <div class="progress-indicator">
+            <div class="progress-step active" data-step="1"></div>
+            <div class="progress-step" data-step="2"></div>
+            <div class="progress-step" data-step="3"></div>
+        </div>
+    </div>
+
+    <script src="js/marriage_registration.js"></script>
+</body>
+</html>
