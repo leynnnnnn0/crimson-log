@@ -373,6 +373,12 @@ body {
     background-color: #f5f5f5;
 }
 
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
 .menu-options li a i {
     margin-right: 10px;
     width: 20px;

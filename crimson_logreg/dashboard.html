@@ -11,11 +11,7 @@
     <div class="dashboard-container">
         <!-- Sidebar -->
         <aside class="sidebar" id="sidebar">
-            <div class="sidebar-header">
-                <div class="logo-section">
-                    <img src="images/binan-logo.png" alt="Logo" class="logo">
-                </div>
-            </div>
+
             
             <nav class="sidebar-menu">
                 <li><a href="dashboard.html" class="active"><i class="fas fa-th-large"></i> Dashboard</a></li>
@@ -33,7 +29,9 @@
             
             <!-- Copyright at bottom of sidebar -->
             <div class="sidebar-footer">
-                <p>&copy; 2025 Dashboard. All rights reserved.</p>
+                <p>    © Copyright 2025. Developed by<br>
+                NU Laguna BS Information System<br>
+                Students.</p>
             </div>
         </aside>
 
@@ -45,8 +43,13 @@
                     <button class="sidebar-toggle" id="sidebar-toggle">
                         <i class="fas fa-bars"></i>
                     </button>
-                    <h1 class="header-title">Dashboard</h1>
+                  <div class="header-logo">
+                    <img src="images/binan-logo.png" alt="Logo" class="logo">
+                      <h1 class="header-title">CRIMSON</h1>
+                  </div>
                 </div>
+
+                      <h1 class="header-title">DASHBOARD</h1>
                 
                 <div class="user-section" id="user-menu-trigger">
                     <div class="user-avatar">
@@ -57,16 +60,16 @@
                     <!-- User Menu -->
                     <div class="user-menu" id="user-menu">
                         <div class="user-info">
-                            <img src="https://via.placeholder.com/40x40/8B0000/ffffff?text=U" alt="User Avatar" class="menu-avatar">
+                            <img src="images/user-avatar.png" alt="User Avatar" class="menu-avatar">
                             <div class="user-details">
                                 <span class="user-name" id="menu-user-name">John Doe</span>
                                 <span class="user-email">john.doe@example.com</span>
                             </div>
                         </div>
                         <ul class="menu-options">
-                            <li><a href="#"><i class="fas fa-user"></i>Profile</a></li>
-                            <li><a href="#"><i class="fas fa-cog"></i>Settings</a></li>
-                            <li><a href="#"><i class="fas fa-bell"></i>Notifications</a></li>
+                            <li><a href="profile.html"><i class="fas fa-user"></i>Profile</a></li>
+                            <li><a href="settings.html"><i class="fas fa-cog"></i>Settings</a></li>
+                            <li><a href="notifications.html"><i class="fas fa-bell"></i>Notifications</a></li>
                             <li class="divider"></li>
                             <li><a href="#" class="logout"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
                         </ul>
@@ -75,83 +78,90 @@
             </header>
 
             <!-- Main Content -->
-            <main class="main-content">
-                <!-- Welcome Section -->
-                <section class="welcome-section">
+             <main class="main-content">
+                <div class="welcome-section">
                     <div class="greeting">
-                        <h2>Welcome back, <span id="user-name">John Doe</span></h2>
-                        <p>Here's what's happening with your account today.</p>
+                        <h2>Welcome, <span id="user-name">[]!</span></h2>
+                        <p>What would you like to do?</p>
                     </div>
                     <div class="date-time">
-                        <div id="current-date">May 31, 2025 - Saturday</div>
-                        <div class="time" id="current-time">12:00:00 PM</div>
+                        <p id="current-date">May 9, 2025 - Friday</p>
+                        <p id="current-time" class="time">09:12:35 PM</p>
+                    </div>
+                </div>
+
+                <!-- Marriage License Section -->
+                <section class="service-section">
+                    <h3 class="section-title">Marriage License Application</h3>
+                    <div class="service-cards">
+                        <a href="application_form.html" class="card">
+                            <div class="card-icon red">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-title">Application Form</div>
+                            </div>
+                            <div class="card-arrow">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                        </a>
+                        <a href="view_marriage.html" class="card">
+                            <div class="card-icon red">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-title">View Marriage License Application</div>
+                            </div>
+                            <div class="card-arrow">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                        </a>
+                        <a href="application_progress.html" class="card">
+                            <div class="card-icon red">
+                                <i class="fas fa-tasks"></i>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-title">Application Progress</div>
+                            </div>
+                            <div class="card-arrow">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                        </a>
                     </div>
                 </section>
 
-                <!-- Service Section -->
+                <!-- Document Request Section -->
                 <section class="service-section">
-                    <h3 class="section-title">Quick Actions</h3>
+                    <h3 class="section-title">Document Request</h3>
                     <div class="service-cards">
-                        <a href="#" class="card">
+                        <a href="document_request.html" class="card">
                             <div class="card-icon red">
-                                <i class="fas fa-user"></i>
+                                <i class="fas fa-file-alt"></i>
                             </div>
                             <div class="card-content">
-                                <div class="card-title">Profile Management</div>
+                                <div class="card-title">Document Request Form</div>
                             </div>
                             <div class="card-arrow">
                                 <i class="fas fa-chevron-right"></i>
                             </div>
                         </a>
-                        
-                        <a href="#" class="card">
+                        <a href="view_document.html" class="card">
                             <div class="card-icon red">
-                                <i class="fas fa-chart-bar"></i>
+                                <i class="fas fa-file-pdf"></i>
                             </div>
                             <div class="card-content">
-                                <div class="card-title">Analytics Dashboard</div>
+                                <div class="card-title">View Document Request</div>
                             </div>
                             <div class="card-arrow">
                                 <i class="fas fa-chevron-right"></i>
                             </div>
                         </a>
-                        
-                        <a href="#" class="card">
+                        <a href="document_progress.html" class="card">
                             <div class="card-icon red">
-                                <i class="fas fa-cog"></i>
+                                <i class="fas fa-tasks"></i>
                             </div>
                             <div class="card-content">
-                                <div class="card-title">System Settings</div>
-                            </div>
-                            <div class="card-arrow">
-                                <i class="fas fa-chevron-right"></i>
-                            </div>
-                        </a>
-                    </div>
-                </section>
-
-                <!-- Additional Service Section -->
-                <section class="service-section">
-                    <h3 class="section-title">Support & Help</h3>
-                    <div class="service-cards">
-                        <a href="#" class="card">
-                            <div class="card-icon red">
-                                <i class="fas fa-question-circle"></i>
-                            </div>
-                            <div class="card-content">
-                                <div class="card-title">Help Center</div>
-                            </div>
-                            <div class="card-arrow">
-                                <i class="fas fa-chevron-right"></i>
-                            </div>
-                        </a>
-                        
-                        <a href="#" class="card">
-                            <div class="card-icon red">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="card-content">
-                                <div class="card-title">Contact Support</div>
+                                <div class="card-title">Document Request Progress</div>
                             </div>
                             <div class="card-arrow">
                                 <i class="fas fa-chevron-right"></i>
@@ -160,6 +170,7 @@
                     </div>
                 </section>
             </main>
+            
         </div>
     </div>
 
