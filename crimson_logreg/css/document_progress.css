@@ -18,6 +18,12 @@
     border-bottom: 1px solid #eee;
 }
 
+.main-content {
+    padding: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
 .request-info h3 {
     margin: 0;
     color: #333;

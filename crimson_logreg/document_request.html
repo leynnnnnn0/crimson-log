@@ -78,7 +78,7 @@
             <!-- form -->
             <form id="document-request-form">
                 <!-- step 1: document request -->
-                <section class="form-section active" id="step-1">
+                <section class="form-section " id="step-1">
                     <h3 class="section-title">TYPE OF DOCUMENT</h3>
                     
                     <div class="form-group">
@@ -101,26 +101,34 @@
                 </section>
                 
                 <!-- step 2: document details -->
-                <section class="form-section" id="step-2">
+                <section class="form-section active" id="step-2">
                     <h3 class="section-title">DOCUMENT DETAILS</h3>
                     
-                    <div class="form-row">
+                    <div >
                         <div class="form-col">
                             <div class="form-group">
-                                <label for="first-name">FIRST NAME</label>
+                                <label for="first-name">Pangalan ng namatay</label>
                                 <input type="text" id="first-name" class="form-control" required>
                             </div>
                         </div>
-                        <div class="form-col">
+                       <div class="form-col">
                             <div class="form-group">
-                                <label for="middle-name">MIDDLE NAME</label>
-                                <input type="text" id="middle-name" class="form-control">
+                                <label for="date-of-birth">Kailan namatay</label>
+                                <input type="date" id="date-of-birth" class="form-control" required>
                             </div>
                         </div>
-                        <div class="form-col">
+                         <div class="form-col">
                             <div class="form-group">
-                                <label for="last-name">LAST NAME</label>
+                                <label for="last-name">Pangalan ng kumukuha</label>
                                 <input type="text" id="last-name" class="form-control" required>
+                            </div>
+                        </div>
+
+
+                                                 <div class="form-col">
+                            <div class="form-group">
+                                <label for="middle-name">Kaano-ano ng may-ari ng dokumento</label>
+                                <input type="text" id="middle-name" class="form-control">
                             </div>
                         </div>
                     </div>
@@ -128,28 +136,25 @@
                     <div class="form-row">
                         <div class="form-col">
                             <div class="form-group">
-                                <label for="sex">SEX</label>
-                                <div class="select-wrapper">
-                                    <select id="sex" class="form-control" required>
-                                        <option value="" selected disabled>Select</option>
-                                        <option value="male">Male</option>
-                                        <option value="female">Female</option>
-                                    </select>
+                                 <label for="sex">Late Registered?</label>
+                                <div class="flex-row">
+                                    <input type="radio" id="yes" name="late-registered" value="yes" required>
+                                    <label for="yes">Yes</label>
+                                
                                 </div>
-                            </div>
-                        </div>
-                        <div class="form-col">
+                                 <div class="flex-row">
+                                    <input type="radio" id="no" name="late-registered" value="no" required>
+                                    <label for="no">No</label>
+                                </div>
+                                  <div class="form-col">
                             <div class="form-group">
-                                <label for="date-of-birth">DATE OF BIRTH</label>
+                                <label for="date-of-birth">Kailan</label>
                                 <input type="date" id="date-of-birth" class="form-control" required>
                             </div>
                         </div>
-                        <div class="form-col">
-                            <div class="form-group">
-                                <label for="place-of-birth">PLACE OF BIRTH</label>
-                                <input type="text" id="place-of-birth" class="form-control" required>
                             </div>
                         </div>
+                        
                     </div>
                     
                     <div class="btn-container">

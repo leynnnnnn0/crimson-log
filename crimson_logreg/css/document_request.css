@@ -192,7 +192,7 @@ body {
     font-weight: bold;
     margin-bottom: 20px;
     color: #333;
-    border-bottom: 2px solid #8B0000;
+   
     padding-bottom: 10px;
     display: inline-block;
 }
@@ -278,6 +278,11 @@ body {
     background-color: #8B0000;
     z-index: 2;
     transition: width 0.3s ease;
+}
+
+.flex-row {
+    display: flex;
+    gap: 5px;
 }
 
 .progress-step {
